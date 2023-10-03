@@ -173,6 +173,7 @@ img {
     margin-top: 20px;
 }
 
+/*
 .recommendation .container div {
     min-width: 300px;
     min-height: 300px;
@@ -189,8 +190,67 @@ img {
 
     font-size: 36px;
     opacity: 0.5;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
+*/
+
+.picCon {
+    display: flex;
+    gap: 20px;
+}
+
+.square1, .square2, .square3 {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    position: relative;
+    margin: 10px;
+    border-radius: 12px;
+    transition: opacity 0.3s, font-weight 0.3s;
+}
+.square1 {
+    background-image: url(brooke-cagle-TxSVqNgnjq4-unsplash.jpg); /* Replace with your image URL */
+}
+
+.square2 {
+    background-image: url(sincerely-media-HFeG2vERmWo-unsplash.jpg); /* Replace with your image URL */
+}
+
+.square3 {
+    background-image: url(magnet-me-EOLgQ6jLdtM-unsplash.jpg); /* Replace with your image URL */
+}
+
+.square1:hover, .square2:hover, .square3:hover {
+    /*filter: brightness(0.7);  Reduce brightness on hover to make it darker */
+    /* transform: scale(1.1); Increase size on hover */
+    opacity: 0.7;  /* Reduce opacity on hover */
+    font-size: 28px; /* Increase font size on hover */
+    
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-overlay {
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    transition: font-size 0.3s; /* Add transition for font size change */
+}
+
+.square1:hover .text-overlay,
+.square2:hover .text-overlay,
+.square3:hover .text-overlay  {
+    font-size: 28px; /* Increase font size on hover */
+}
+
 
 /* ansökan */
 .cta {
@@ -255,12 +315,17 @@ img {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
+}
+
+.footer .right img{
+    width: 33.33%;
     align-items: flex-start;
 }
 
 .footer .right a {
     color: black;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .footer .right a:hover {
